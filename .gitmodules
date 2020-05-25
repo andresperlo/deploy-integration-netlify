@@ -1,0 +1,6 @@
+[submodule "frontend-submodule"]
+	path = frontend-submodule
+	url = https://github.com/andresperlo/mi-pimer-deploy-frontend.git
+[submodule "backend-submodule"]
+	path = backend-submodule
+	url = https://github.com/andresperlo/mi-pimer-deploy-backend.git
