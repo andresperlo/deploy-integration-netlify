@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && mkdirp dist/functions && mkdirp dist/frontend && npm run build:backend-submodule && npm run build:frontend-submodule",
-    "build:backend-submodule": "",
-    "build:frontend-submodule":"cd frontend-submodule && npm install && npm run build && mv build/* ../dist/frontend"
+    "build:backend-submodule": "cd backend-submodule && npm install && cd .. && netlify-lambda build src",
+    "build:frontend-submodule": "cd frontend-submodule && npm install && npm run build && mv build/* ../dist/frontend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mkdirp": "^1.0.4",
+    "netlify-lambda": "^1.6.3",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "serverless-http": "^2.5.0"
   }
 }
